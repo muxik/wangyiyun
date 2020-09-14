@@ -1,7 +1,6 @@
 # !/usr/bin/python3
 import colorama
 import os
-import keyboard
 from src import NetEase
 
 
@@ -20,6 +19,8 @@ def line(num):
 while True:
     print(colorama.Fore.GREEN + '输入歌曲名开始网抑云("Ctrl+c"退出)' + colorama.Style.RESET_ALL)
     keyword = input(":")
+
+    os.system("clear")
     info = music.getMusicInfo(keyword=keyword)
     for i in range(len(info)):
         print(
